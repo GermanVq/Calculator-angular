@@ -10,4 +10,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-calculator';
+  subText = ''; 
+  mainText = ''; 
+  operand1: number; 
+  operand2: number; 
+  operator = ''; 
+  calculationString = ''; 
+
 }
