@@ -10,24 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'angular-calculator';
-  
   view = '0';
   firstNum = null;
   operator = null;
   secondNum = false;
 
-  constructor() { }
 
   ngOnInit() {
   }
-
-  public numPressed(v: string){
-    console.log(v);
+  public acPressed(){
+    this.view= '0';
+    this.firstNum = null;
+    this.operator = null;
+    this.secondNum = false;
+  }
+  public numPressed(i: string){
+    console.log(i);
     if(this.secondNum){
-      this.view= v;
+      this.view= i;
       this.secondNum = false;
     }else{
-      this.view=== '0'? this.view= v: this.view+= v;
+      this.view=== '0'? this.view= i: this.view+= i;
 
     }
   }
@@ -68,10 +71,5 @@ export class AppComponent implements OnInit {
     console.log(this.firstNum);
  
   }
-  public acPressed(){
-    this.view= '0';
-    this.firstNum = null;
-    this.operator = null;
-    this.secondNum = false;
-  }
+ 
 }
