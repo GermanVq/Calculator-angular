@@ -34,43 +34,41 @@
   </div>
 
   <!-- Resources -->
-  <h2>Welcome to Calculator Angular</h2>
+  <h2>Welcome to Calculator in Angular</h2>
   
 
-  <div class="card-container">
+  <div class="calculator">
     <div class="main">
-      <form class="form">
           <div layout="row" style="text-align: center;">
-            <input pattern="[\-/*+.0-9]{1,15}" name="calculation" class="textview" type="text" style="text-align: end;">  
+            <input pattern="[\-/*+.0-9]{1,15}" name="calculation" class="textview" type="text" style="text-align: end;"  [value]="view">  
           </div>
         <div layout="row">
-          <button type="submit" class="button-ac"ng-click="acButtton()" value="">AC</button>
-          <button type="submit" class="button-n" ng-click="operatorPressed('/')" value="">/</button>
-          <button type="submit" class="button-n" ng-click="operatorPressed('*')" value="">*</button>
+          <button type="button" class="button-ac" (click)="acPressed()" value="">AC</button>
+          <button type="button" class="button-op" (click)="operatorPressed('/')" value="">&divide;</button>
+          <button type="button" class="button-op" (click)="operatorPressed('*')" value="">&times;</button>
         </div>
         <div layout="row">
-          <button type="submit" class="button-n" ng-click="numPressed('1')" value="1">1</button>
-          <button type="submit" class="button-n" ng-click="numPressed('2')" value="2">2</button>
-          <button type="submit" class="button-n" ng-click="numPressed('3')" value="3">3</button>
-          <button type="submit" class="button-n" ng-click="operatorPressed('-')" value="">-</button>
+          <button type="button" class="button-n" (click)="numPressed('1')" value="1">1</button>
+          <button type="button" class="button-n" (click)="numPressed('2')" value="2">2</button>
+          <button type="button" class="button-n" (click)="numPressed('3')" value="3">3</button>
+          <button type="button" class="button-op" (click)="operatorPressed('-')" value="">-</button>
         </div>
         <div layout="row">
-          <button type="submit" class="button-n" ng-click="numPressed('4')" value="4">4</button>
-          <button type="submit" class="button-n" ng-click="numPressed('5')" value="5">5</button>
-          <button type="submit" class="button-n" ng-click="numPressed('6')" value="6">6</button>
-          <button type="submit" class="button-n" ng-click="operatorPressed('+')" value="">+</button>
+          <button type="button" class="button-n" (click)="numPressed('4')" value="4">4</button>
+          <button type="button" class="button-n" (click)="numPressed('5')" value="5">5</button>
+          <button type="button" class="button-n" (click)="numPressed('6')" value="6">6</button>
+          <button type="button" class="button-op" (click)="operatorPressed('+')" value="">+</button>
         </div>
         <div layout="row">
-          <button type="submit" class="button-n" ng-click="numPressed('7')" value="7">7</button>
-          <button type="submit" class="button-n" ng-click="numPressed('8')" value="8">8</button>
-          <button type="submit" class="button-n" ng-click="numPressed('9')" value="9">9</button>
-          <button type="submit" class="button-eq" ng-click="operatorPressed('=')" value="">=</button>
+          <button type="button" class="button-n" (click)="numPressed('7')" value="7">7</button>
+          <button type="button" class="button-n" (click)="numPressed('8')" value="8">8</button>
+          <button type="button" class="button-n" (click)="numPressed('9')" value="9">9</button>
+          <button type="button" class="button-eq" (click)="operatorPressed('=')" value="=">=</button>
         </div>
         <div layout="row">
-          <button type="submit" class="button-n" ng-click="numPressed('0')" value="0">0</button>
-          <button type="submit" class="button-n" ng-click="operatorPressed('.')">.</button>
+          <button type="button" class="button-n" (click)="numPressed('0')" value="0">0</button>
+          <button type="button" class="button-n" (click)="decimalPressed()" value=".">.</button>
         </div>
-      </form>
     </div>
   </div>
 
