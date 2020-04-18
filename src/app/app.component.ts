@@ -39,18 +39,18 @@ export class AppComponent implements OnInit {
       this.view+= '.';
     }
   }
-  private Calculation(op, secondOp){
+  private Calculation(op, op2){
     switch(op){
       case '+':
-        return this.firstNum += secondOp; 
+        return this.firstNum += op2; 
         case '-': 
-        return this.firstNum -= secondOp; 
+        return this.firstNum -= op2; 
         case '*': 
-        return this.firstNum *= secondOp; 
+        return this.firstNum *= op2; 
         case '/': 
-        return this.firstNum /= secondOp; 
+        return this.firstNum /= op2; 
         case '=':
-        return secondOp;
+        return op2;
     }
   }
 
