@@ -41,7 +41,7 @@ export class AppComponent implements OnInit {
   }
   private Calculation(op, op2){
     switch(op){
-      case '+':
+        case '+':
         return this.firstNum += op2; 
         case '-': 
         return this.firstNum -= op2; 

@@ -2,19 +2,19 @@
 # AngularCalculator
 ![Cangular](https://user-images.githubusercontent.com/20993116/79702806-11ce4b80-826d-11ea-9a4a-2c98881ceac1.PNG)
 
-Desarrollo de una calculadora funcional que permita realizar las operaciones básicas (suma, resta , multiplicación y división) y que permita realizar las  operaciones con decimales (.)
+Development of a functional calculator that allows basic operations (addition, subtraction, multiplication and division) and that allows operations to be carried out with decimals (.)
 
-Listado de botones:
+List of buttons:
 
-Las operaciones son (+,-,*, /) 
+The operations are (+, -, *, /)
 
-Los números del 1 al 9
+The numbers from 1 to 9
 
 Decimal (.)
 
-Botón igual (=) para el resultado
+Equal button (=) for the result
 
-Boton (AC) que significa all clear es para limpiar
+Button (AC), is to clean
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
 
