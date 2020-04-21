@@ -14,7 +14,7 @@
     <div class="spacer"></div>
 </div>
 
-<div class="content" role="main">
+<div class="content" role="main" (keydown)="handleKeyboardEvent($event)">
 
   <!-- Highlight Card -->
   <div class="card highlight-card card-small">
@@ -37,7 +37,7 @@
   <h2>Welcome to Calculator in Angular</h2>
   
 
-  <div class="calculator">
+  <div class="calculator" >
     <div class="main">
           <div layout="row" style="text-align: center;">
             <input pattern="[\-/*+.0-9]{1,15}" name="Display" class="textview" type="text" style="text-align: end;"  [value]="view" disabled>  

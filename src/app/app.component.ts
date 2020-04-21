@@ -5,7 +5,9 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-   
+  host: {
+    '(document:keydown)': 'handleKeyboardEvent($event)'
+  }
 
 })
 export class AppComponent implements OnInit {
@@ -14,6 +16,51 @@ export class AppComponent implements OnInit {
   firstNum = null;
   operator = null;
   secondNum = false;
+
+  Str_TeclaPresed='';
+
+  handleKeyboardEvent(event: KeyboardEvent) {
+
+    //
+  console.log(event);
+
+    this.Str_TeclaPresed = event.key.toLocaleLowerCase();
+
+    if(
+
+      this.Str_TeclaPresed === '+'
+      || this.Str_TeclaPresed === '-'
+      || this.Str_TeclaPresed === '/'
+      || this.Str_TeclaPresed === '*'
+      || this.Str_TeclaPresed === '='
+      || this.Str_TeclaPresed === 'enter'
+      
+    ){
+
+      if (this.Str_TeclaPresed === 'enter'){
+        this.Str_TeclaPresed = '=';
+      }
+      this.operatorPressed(this.Str_TeclaPresed);
+
+    }
+
+    if(
+
+      this.Str_TeclaPresed === '0'
+      || this.Str_TeclaPresed === '1'
+      || this.Str_TeclaPresed === '2'
+      || this.Str_TeclaPresed === '3'
+      || this.Str_TeclaPresed === '4'
+      || this.Str_TeclaPresed === '5'
+      || this.Str_TeclaPresed === '6'
+      || this.Str_TeclaPresed === '7'
+      || this.Str_TeclaPresed === '8'
+      || this.Str_TeclaPresed === '9'
+    ){
+      this.numPressed(this.Str_TeclaPresed);
+    }
+
+  }
 
 
   ngOnInit() {
