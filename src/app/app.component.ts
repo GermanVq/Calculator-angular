@@ -15,19 +15,17 @@ export class AppComponent implements OnInit {
   view = '0';
   firstNum = null;
   operator = null;
-  secondNum = false;
+  secondNum = null;
 
   Str_TeclaPresed='';
 
   handleKeyboardEvent(event: KeyboardEvent) {
 
-    //
-  console.log(event);
+    // console.log(event);
 
     this.Str_TeclaPresed = event.key.toLocaleLowerCase();
 
     if(
-
       this.Str_TeclaPresed === '+'
       || this.Str_TeclaPresed === '-'
       || this.Str_TeclaPresed === '/'
@@ -43,9 +41,8 @@ export class AppComponent implements OnInit {
       this.operatorPressed(this.Str_TeclaPresed);
 
     }
-
+ 
     if(
-
       this.Str_TeclaPresed === '0'
       || this.Str_TeclaPresed === '1'
       || this.Str_TeclaPresed === '2'
@@ -59,6 +56,11 @@ export class AppComponent implements OnInit {
     ){
       this.numPressed(this.Str_TeclaPresed);
     }
+    
+    if(this.Str_TeclaPresed === '.'){
+      this.decimalPressed();
+    }
+
 
   }
 
@@ -71,7 +73,8 @@ export class AppComponent implements OnInit {
     this.operator = null;
     this.secondNum = false;
   }
-  public numPressed(i: string){
+
+  public numPressed(i){
     console.log(i);
     if(this.secondNum){
       this.view= i;
@@ -101,7 +104,7 @@ export class AppComponent implements OnInit {
     }
   }
 
-  public operatorPressed(op: string){
+  public operatorPressed(op){
     console.log(op);
 
     if(this.firstNum === null){
