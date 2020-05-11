@@ -1,6 +1,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <style>
- 
 </style>
 
 <!-- Toolbar -->
@@ -18,7 +17,6 @@
 
   <!-- Highlight Card -->
   <div class="card highlight-card card-small">
-
     <svg id="rocket" alt="Rocket Ship" xmlns="http://www.w3.org/2000/svg" width="101.678" height="101.678" viewBox="0 0 101.678 101.678">
       <g id="Group_83" data-name="Group 83" transform="translate(-141 -696)">
         <circle id="Ellipse_8" data-name="Ellipse 8" cx="50.839" cy="50.839" r="50.839" transform="translate(141 696)" fill="#dd0031"/>
@@ -39,9 +37,9 @@
 
   <div class="calculator" >
     <div class="main">
-          <div layout="row" style="text-align: center;">
-            <input pattern="[\-/*+.0-9]{1,15}" name="Display" class="textview" type="text" style="text-align: end;"  [value]="view" disabled>  
-          </div>
+      <div layout="row" style="text-align: center;">
+        <input pattern="[\-/*+.0-9]{1,15}" name="Display" class="textview" type="text" style="text-align: end;"  [value]="view" disabled>  
+      </div>
         <div layout="row">
           <button type="button" class="button-ac" (click)="acPressed()" value="">AC</button>
           <button type="button" class="button-op" (click)="operatorPressed('/')" value="">&divide;</button>
@@ -77,7 +75,7 @@
       You like?&nbsp;
       <a href="https://github.com/GermanVq/Calculator-angular" target="_blank" rel="noopener"> Give our repo a star.
         <div class="github-star-badge">
-            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
           Star
         </div>
       </a>
